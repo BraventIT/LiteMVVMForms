@@ -20,13 +20,13 @@ public partial class App : Application
  
          public App ()
          {
-             InitializeComponent (); 
- 
              // Register the services in the Forms Service Locator
              RegisterServices ();
  
              // Register the ViewModels and asociate them to the corresponding Views
              RegisterViews ();
+             
+             InitializeComponent (); 
  
              // The root page of your application
              MainPage = new LiteNavigationPageService<FirstViewModel>().Create();
