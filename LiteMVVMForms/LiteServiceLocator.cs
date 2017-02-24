@@ -35,7 +35,7 @@ namespace LiteMVVMForms
             object service = null;
             if (services.TryGetValue(typeof(T), out service))
                 return service as T;
-            return default(T);
+            throw new NotImplementedException($"Implementation not register for this Interface: {typeof(T).Name}");
         }
 
         /// <summary>
